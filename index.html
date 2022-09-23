@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <header class="header border">
+    <header class="header">
       <div class="container header">
         <nav class="container-nav">
           <a href="./index.html" lang="en" class="logo"
@@ -59,7 +59,9 @@
     <main>
       <section class="hero">
         <h1 class="hero-heading">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="hero-btn">Замовити послугу</button>
+        <button type="button" class="hero-btn" data-modal-open>
+          Замовити послугу
+        </button>
       </section>
       <section class="features">
         <div class="container">
@@ -127,9 +129,11 @@
                 alt="Робота за комп'ютером"
                 width="370"
               />
+              <p class="activity-descr">Десктопні додатки</p>
             </li>
             <li class="activity-item">
               <img src="./images/img2.jpg" alt="Тримає телефон" width="370" />
+              <p class="activity-descr">Мобільні додатки</p>
             </li>
             <li class="activity-item">
               <img
@@ -137,6 +141,7 @@
                 alt="Малює на планшеті"
                 width="370"
               />
+              <p class="activity-descr">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -481,17 +486,23 @@
                 href="https://www.linkedin.com"
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                ><svg width="20px" height="20px">
-                  <use
-                    href="./images/icons.svg#icon-linkedin-2"
-                    width="20"
-                    height="20"
-                  ></use></svg
+                ><svg width="20" height="20">
+                  <use href="./images/icons.svg#icon-linkedin-2"></use></svg
               ></a>
             </li>
           </ul>
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-button" data-modal-close>
+          <svg width="18" height="18">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
